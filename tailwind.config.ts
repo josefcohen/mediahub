@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+import colors from "tailwindcss/colors";
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,8 +11,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        success: colors.green,
+        warning: colors.yellow,
+        error: colors.red,
       },
     },
   },
